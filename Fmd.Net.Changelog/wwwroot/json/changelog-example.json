@@ -1,0 +1,37 @@
+{
+  "versions": [
+    {
+      "date": "16/12/2024",
+      "changes": [
+        {
+          "type": "added",
+          "label": "NOVIDADE",
+          "icon": "foguete",
+          "description": "Implementamos a opção de ordenar as micro-operações",
+          "details": "Além disso, o relatório foi aprimorado para exibir essas informações"
+        },
+        {
+          "type": "changed",
+          "label": "ALTERAÇÃO",
+          "icon": "lapis",
+          "description": "Otimizamos a integração com a plataforma X",
+          "details": "Os pedidos sem código SKU agora aparecem na tela"
+        },
+        {
+          "type": "security",
+          "label": "SEGURANÇA",
+          "icon": "trancar",
+          "description": "Adicionamos a autenticação de dois fatores",
+          "details": "Faça login com seu celular"
+        },
+        {
+          "type": "fix",
+          "label": "CORREÇÃO",
+          "icon": "exclamacao",
+          "description": "Corrigimos o erro ao tentar excluir um usuário",
+          "details": "Agora é possível excluir usuários sem problemas"
+        }
+      ]
+    }
+  ]
+}

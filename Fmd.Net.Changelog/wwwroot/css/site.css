@@ -1,0 +1,99 @@
+.changelog-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.version-block {
+    margin-bottom: 40px;
+}
+
+.version-date {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.change-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.white-icon {
+    filter: brightness(0) invert(1);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    gap: 8px;
+}
+
+.badge-icon {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+.badge-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+
+.badge-security {
+    background-color: #33277b;
+    color: white;
+}
+
+
+.badge-fix {
+    background-color: #e53348;
+    color: white;
+}
+
+.change-content {
+    margin-top: 12px;
+    padding-left: 4px;
+}
+
+.change-description {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.change-details {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    padding-left: 12px;
+    border-left: 3px solid #e9ecef;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .changelog-container {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    .change-item {
+        padding: 15px;
+    }
+}

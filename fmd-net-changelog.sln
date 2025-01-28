@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fmd.Net.Changelog", "Fmd.Net.Changelog\Fmd.Net.Changelog.csproj", "{37C93F89-94CE-44A9-8E3F-A64CE7023E3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37C93F89-94CE-44A9-8E3F-A64CE7023E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C93F89-94CE-44A9-8E3F-A64CE7023E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C93F89-94CE-44A9-8E3F-A64CE7023E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C93F89-94CE-44A9-8E3F-A64CE7023E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

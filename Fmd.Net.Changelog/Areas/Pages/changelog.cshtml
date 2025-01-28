@@ -1,0 +1,32 @@
+@page "/changelog"
+@model Fmd.Net.Changelog.Areas.Pages.ChangelogModel
+
+<link rel="stylesheet" href="~/css/site.css"/>
+
+<div class="changelog-container">
+    @foreach (var version in Model.Versions)
+    {
+        <div class="version-block">
+            <h3 class="version-date">@version.Date</h3>
+            @foreach (var change in version.Changes)
+            {
+                <div class="change-item">
+                    <span class="badge @Model.GetBadgeClass(change.Type)">
+                        <img src="~/icons/@(change.Icon).svg" class="badge-icon white-icon" alt="@change.Label" />
+                        @change.Label
+                    </span>
+                    <div class="change-content">
+                        <p class="change-description">@change.Description</p>
+                        @if (!string.IsNullOrEmpty(change.Details))
+                        {
+                            <p class="change-details">@change.Details</p>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+
+

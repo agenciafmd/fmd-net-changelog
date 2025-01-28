@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Fmd.Net.Changelog</PackageId>
+        <Title>Fmd.Net.Changelog</Title>
+        <Authors>Milena Ramiro</Authors>
+        <Company>FMD</Company>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <SupportedPlatform Include="browser"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1"/>
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Areas\"/>
+        <EmbeddedResource Include="wwwroot\**\*"/>
+    </ItemGroup>
+</Project>
