@@ -1,22 +1,27 @@
 {
   "versions": [
     {
-      "date": "16/12/2024",
+      "date": "28/01/2025",
       "changes": [
         {
           "type": "added",
           "label": "NOVIDADE",
           "icon": "foguete",
-          "description": "Implementamos a opção de ordenar as micro-operações",
+          "description": "Implementamos a opção de ordenar os produtos por nome",
           "details": "Além disso, o relatório foi aprimorado para exibir essas informações"
         },
         {
           "type": "changed",
           "label": "ALTERAÇÃO",
           "icon": "lapis",
-          "description": "Otimizamos a integração com a plataforma X",
-          "details": "Os pedidos sem código SKU agora aparecem na tela"
-        },
+          "description": "Otimizamos a integração com a plataforma Contoso SA",
+          "details": "O carregamento de dados agora é mais rápido"
+        }
+      ]
+    },
+    {
+      "date": "15/12/2024",
+      "changes": [
         {
           "type": "security",
           "label": "SEGURANÇA",
