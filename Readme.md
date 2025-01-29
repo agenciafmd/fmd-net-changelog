@@ -10,6 +10,12 @@
   nuget install Fmd.Net.Changelog
 ```
 
+or
+
+```shell
+    dotnet add package Fmd.Net.Changelog --version 1.0.0
+```
+
 ## Configuration
 
 Add the following instructions in your Program.cs file
