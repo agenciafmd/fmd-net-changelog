@@ -1,7 +1,7 @@
 @page "/changelog"
-@model Fmd.Net.Changelog.Areas.Pages.ChangelogModel
+@model Fmd.Net.Changelog.Pages.ChangelogModel
 
-<link rel="stylesheet" href="~/css/site.css"/>
+<link rel="stylesheet" href="@Model.ContentPath/css/site.css" />
 
 <div class="changelog-container">
     @foreach (var version in Model.Versions)
@@ -12,7 +12,7 @@
             {
                 <div class="change-item">
                     <span class="badge @Model.GetBadgeClass(change.Type)">
-                        <img src="~/icons/@(change.Icon).svg" class="badge-icon white-icon" alt="@change.Label" />
+                        <img src="@Model.ContentPath/icons/@(change.Icon).svg" class="badge-icon white-icon" alt="@change.Label" />
                         @change.Label
                     </span>
                     <div class="change-content">

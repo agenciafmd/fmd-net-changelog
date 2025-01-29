@@ -1,26 +1,33 @@
 using System.Text.Json;
+using Fmd.Net.Changelog.Configurations;
 using Fmd.Net.Changelog.Models;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Fmd.Net.Changelog.Areas.Pages;
+namespace Fmd.Net.Changelog.Pages;
 
 public class ChangelogModel : PageModel
 {
-    private readonly IWebHostEnvironment _env;
+    private readonly ChangelogOptions _options;
     public List<ChangelogVersion> Versions { get; set; } = new();
 
-    public ChangelogModel(IWebHostEnvironment env)
+    public string ContentPath = "/_content/Fmd.Net.Changelog";
+
+    public ChangelogModel(ChangelogOptions options)
     {
-        _env = env;
+        _options = options;
     }
 
     public async Task OnGetAsync()
     {
-        var filePath = Path.Combine(_env.WebRootPath, "json", "changelog.json");
+        var filePath = _options.JsonPath;
+        if (!System.IO.File.Exists(filePath))
+        {
+            throw new Exception("Changelog file not found.");
+        }
+
         var json = await System.IO.File.ReadAllTextAsync(filePath);
         var result = JsonSerializer.Deserialize<ChangelogRoot>(json);
-        
+
         if (result != null)
         {
             Versions = result.Versions;
