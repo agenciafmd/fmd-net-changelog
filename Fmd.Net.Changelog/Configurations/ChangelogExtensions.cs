@@ -6,7 +6,7 @@ namespace Fmd.Net.Changelog.Configurations;
 public static class ChangelogExtensions
 {
     public static IServiceCollection AddChangelog(
-        this IServiceCollection services, 
+        this IServiceCollection services,
         Action<ChangelogOptions> options = null)
     {
         var changelogOptions = new ChangelogOptions();
@@ -14,14 +14,16 @@ public static class ChangelogExtensions
 
         services.AddRazorPages();
         services.AddSingleton(changelogOptions);
-        
+
         return services;
     }
 
     public static IApplicationBuilder UseChangelog(
         this IApplicationBuilder app)
     {
+        app.UseRouting();
         app.UseStaticFiles();
+        app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); });
         return app;
     }
 }
