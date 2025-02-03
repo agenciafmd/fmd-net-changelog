@@ -1,3 +1,4 @@
+using Fmd.Net.Changelog.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,6 +15,7 @@ public static class ChangelogExtensions
 
         services.AddRazorPages();
         services.AddSingleton(changelogOptions);
+        services.AddScoped<ICommitService, CommitService>();
 
         return services;
     }

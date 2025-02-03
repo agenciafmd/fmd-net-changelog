@@ -1,4 +1,5 @@
 @page "/changelog"
+@using Fmd.Net.Changelog.Factories
 @model Fmd.Net.Changelog.Pages.ChangelogModel
 
 <link rel="stylesheet" href="@Model.ContentPath/css/site.css" />
@@ -11,7 +12,7 @@
             @foreach (var change in version.Changes)
             {
                 <div class="change-item">
-                    <span class="badge @Model.GetBadgeClass(change.Type)">
+                    <span class="badge @Badge.GetBadgeClass(change.Type)">
                         <img src="@Model.ContentPath/icons/@(change.Icon).svg" class="badge-icon white-icon" alt="@change.Label" />
                         @change.Label
                     </span>
