@@ -49,7 +49,8 @@ public class CommitService : ICommitService
         }
         catch (Exception ex)
         {
-            throw new Exception("Erro ao obter mensagens dos commits", ex);
+            Console.WriteLine($"Ocorreu um erro: {ex}");
+            return new ChangelogRoot();
         }
     }
 
